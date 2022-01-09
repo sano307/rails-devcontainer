@@ -1,24 +1,28 @@
-# README
+# rails-devcontainer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to link Rails and VSCode Remote Container.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [VSCode Remote Container](https://code.visualstudio.com/docs/remote/containers/)
 
-* System dependencies
+## Environment
 
-* Configuration
+- macOS (Catalina)
 
-* Database creation
+## Usage
 
-* Database initialization
+Open the VSCode, and then just press `command + shift + p`, select the `Remote-Containers: Reopen in Container`.
 
-* How to run the test suite
+Next, you have to create a new terminal on the VSCode screen, some like below.
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+vscode ➜ /workspace (main) $
+```
 
-* Deployment instructions
+Lastly, run `rails s` and open the browser to `http://localhost:3000`
 
-* ...
+```sh
+$ rails s
+```
