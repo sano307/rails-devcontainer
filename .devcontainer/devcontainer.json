@@ -1,0 +1,44 @@
+{
+	"name": "Ruby on Rails & Postgres",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"settings": { 
+		"sqltools.connections": [
+			{
+				"name": "Rails Development Database",
+				"driver": "PostgreSQL",
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 5432,
+				"database": "app_development",
+				"username": "vscode"
+			},
+			{
+				"name": "Rails Test Database",
+				"driver": "PostgreSQL",
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 5432,
+				"database": "app_test",
+				"username": "vscode"
+			}
+		]
+	},
+	"extensions": [
+		"castwide.solargraph",
+		"rebornix.Ruby",
+		"mtxr.sqltools",
+		"mtxr.sqltools-driver-pg"
+	],
+	"forwardPorts": [
+		3000,
+		5432
+	],
+	"postCreateCommand": "apt-get update && apt-get install -y curl",
+	"shutdownAction": "stopCompose",
+	"remoteUser": "vscode",
+	"features": {
+		"git": "latest"
+	}
+}
